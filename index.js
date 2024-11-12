@@ -3,9 +3,7 @@ const app = express();
 const port = 8000;
 
 // Egyetlen GET végpont
-app.get('/', (req, res) => {
-  res.send('Ez egy GET válasz');
-});
+app.use("/", express.static("public"));
 
 // Szerver indítása
 app.listen(port, () => {
